@@ -23,7 +23,8 @@
 
 	"background": {
 		"scripts": [
-			"background/greylist.js",
+			"data/whitelist.js",
+			"data/greylist.js",
 			"lib.js",
 			"background/updateBlacklist.js",
 			"background/actions.js",

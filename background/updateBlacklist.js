@@ -15,7 +15,7 @@ function updateBlacklist() {
       const domain = stripDomainFromURL(record.url);
       let foundInGL = false;
       for(const g of GREYLIST) {
-        if(g === domain) {
+        if(g.test(domain)) {
           foundInGL = true;
           break;
         }
@@ -26,7 +26,7 @@ function updateBlacklist() {
       });
     }
     const blacklist = {
-      data: formatted,
+      data: [...new Set(formatted)],
       timestamp: Date.now()
     };
     browser.storage.local.set({blacklist});

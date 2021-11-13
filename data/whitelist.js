@@ -1,0 +1,3 @@
+const WHITELIST = [
+  /(^|\.)google\.com$/
+]
