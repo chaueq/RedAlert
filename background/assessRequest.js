@@ -30,10 +30,13 @@ async function assessRequest(request) {
   }
 
   if(block) {
-    // const preferences = await window.localStorage.getItem('preferences');
-    const preferences = {protectionLevel: 'strict'};
-    if(preferences.protectionLevel === 'strict' && request.tabId >= 0) {
+    const preferences = (await browser.storage.local.get('preferences')).preferences;
+    console.log(preferences, request.tabId)
+    if(preferences.strictProtection == 1 && request.tabId >= 0) {
       actionBlockTab(request.tabId, domain);
+    }
+    else if(request.tabId >= 0){
+      tryBlockingTab(request.tabId, domain);
     }
 
     return {cancel: true}
