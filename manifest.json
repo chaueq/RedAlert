@@ -23,6 +23,7 @@
 
 	"background": {
 		"scripts": [
+			"background/init.js",
 			"data/whitelist.js",
 			"data/greylist.js",
 			"lib.js",
@@ -30,5 +31,11 @@
 			"background/actions.js",
 			"background/assessRequest.js"
 		]
+	},
+
+	"browser_action": {
+		"default_icon": "images/icon.png",
+		"default_title": "UGuard",
+		"default_popup": "popup/index.html"
 	}
 }

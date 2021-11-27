@@ -1,0 +1,46 @@
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  max-width: 192px;
+}
+
+body {
+  background: #303030;
+  color: #eeeeee;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  width: 256px;
+}
+
+hr {
+  margin-bottom: -1rem;
+}
+
+div.element {
+  width: 100%;
+  font-size: 1rem;
+  /* border-width: 1px;
+  border-style: solid;
+  border-color: black; */
+  margin-top: 1rem;
+}
+
+div.elementName {
+  display: inline-block;
+  float: left;
+  text-align: left;
+  width: 70%;
+}
+
+div.elementValue {
+  display: inline-block;
+  float: right;
+  text-align: right;
+  width: 20%;
+}
